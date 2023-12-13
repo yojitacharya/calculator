@@ -8,8 +8,6 @@
         <script src="calculator.js"></script>
     </head>
     <body>
-        
-
         <div class="container">
             <div class="calculator">
                 <form>
@@ -18,7 +16,7 @@
                     </div>
                 <div>
                     <input type="button" value="AC" onclick="display.value = '' ">
-                    <input type="button" value="DE">
+                    <input type="button" value="DE" onclick="display.value = display.value.substring(0, display.value.length -1);">
                     <input type="button" value="." onclick="display.value += '.' ">
                     <input type="button" value="/" onclick="display.value += '/' ">
                 </div>
@@ -42,7 +40,7 @@
                 </div>
                 <div>
                     <input type="button" value="0" onclick="display.value += '0' ">
-                    <input type="button" value="=" class="equal">
+                    <input type="button" value="=" class="equal" onclick="calc = display.value; test() ">
                 </div>
             </form>   
             </div>
